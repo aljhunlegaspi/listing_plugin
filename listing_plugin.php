@@ -27,10 +27,6 @@ if(!class_exists('ListingPlugin')){
 
         public function initialize()
         {
-            //   include_once MY_PLUGIN_PATH . 'includes/utilities.php';
-
-            //   include_once MY_PLUGIN_PATH . 'includes/options-page.php';
-
               include_once MY_PLUGIN_PATH . 'includes/listings.php';
         }
     }
