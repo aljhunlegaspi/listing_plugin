@@ -18,7 +18,7 @@
       <input type="text" name="country"><br /><br />
 
       <label>State</label><br />
-      <input name="state"></textarea><br /><br />
+      <input type="text" name="state"></input><br /><br />
 
       <button type="submit">Submit form</button>
 
