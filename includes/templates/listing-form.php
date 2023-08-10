@@ -8,17 +8,16 @@
 
       <?php wp_nonce_field('wp_rest');?>
 
-      <label>Name</label><br />
-      <input type="text" name="name"><br /><br />
+      <label>Subject</label><br />
+      <select id="subject" name="subject">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+      </select>
 
       <label>City</label><br />
-      <input type="text" name="city"><br /><br />
-
-      <label>Country</label><br />
-      <input type="text" name="country"><br /><br />
-
-      <label>State</label><br />
-      <input type="text" name="state"></input><br /><br />
+      <textarea type="text" name="city"></textarea>
 
       <button type="submit">Submit form</button>
 
@@ -33,7 +32,7 @@
                   $("#form_error").hide();
 
                   var form = $(this);
-
+                  console.log(form.serialize(), 'form.serialize()')
                   $.ajax({
                         type:"POST",
                         url: "<?php echo get_rest_url(null, 'listing-form/submit');?>",
@@ -47,7 +46,7 @@
                         },
                         error: function(err){
                             console.log(err);
-                              $("#form_error").html("There was an error submitting").fadeIn();
+                              // $("#form_error").html("There was an error submitting").fadeIn();
                         }
 
 

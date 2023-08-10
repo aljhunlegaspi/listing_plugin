@@ -1,0 +1,213 @@
+meeting link
+
+--- Task 3 ----
+
+1- Create a child theme
+2- Create a custom template for post type listing
+3- Make sure all the information is visible on that template - 
+4- Include custom js/css files through you plugin if necassary- done
+5- Search how to pass PHP variables into js files.
+6- Use fontawesome to assign amenities icons-done
+7- A custom button in settings page to delete all posts.
+
+
+---- Task 4 ----
+
+1- Create a custom template for search result page
+2- Use following filters, 
+	- Location (City or Country)
+	- Guests
+	- No of rooms
+	- Amenities
+3- Use ajax to filter these results
+
+.
+
+@todo - June 27, 2023
+
+1. search to increase memory limit - done but not applied for now;
+2. use UNIUE ID or the listing information for searching duplicate posts - DONE
+3. complete the delete all listing and fix the error in removing taxonomy terms - DONE
+4. Finish activity 4 - pending
+
+@todo - June 27, 2023
+
+1. Finish activity 4 - done
+2. start working on Task 5
+   - add calendar into a meta box
+   - base the availabity in a custom field (comma separated dates in any format i.e m/d/y or m-d-y)
+
+@todo - June 28, 2023
+1. search jqeury.ajax data type - done
+2. add hidden input field to use the default update button - done
+3. make custom field inputs in metaboxes - done
+4. finish task 5- ongoing
+5. responsive design for task3 and task 4 - done
+
+@todo - June 29, 2023 to - June 30, 2023
+1- research default work flow for wordpress
+2- set input dates to readonly specifically('booked dates') or remove the field entirely. - done
+3- change calendar implementaion in admin side - done adding booking range dates, inprogress removing booking range dates
+4- finish FE side implementaion for booking includung total breakdowns - done
+5- checkout page and new custom_post_type for the reservation.
+
+
+
+
+@todos
+1- add extra guest fees and adjust computation - done
+2. use GET method instead of POST method in checkout page - done
+3. add new columns called arrive, depart on the reservation table on admin- done
+4. reservation statuses (canceled, pending, success) - pending;
+
+additional task- change calendar implementation
+
+@todos
+1. research wp_ajax hooks wp_ajax_nopriv - done
+2. change calculation approach - done.
+3. abandon status for reservation flow - pending.
+
+----reservation flow----
+   - search user if existing, proceed to reservation if YES and create user if No
+   - use user details uppon saving the reservation
+   - mark reservation as pending
+   - if reservation is successfull then mark date range in listing booked dates as invalid
+   - add abandoned reservations flow - done
+----reservation flow end----
+
+
+---- Task 6 ----
+1- Checkout page - done
+2- Post Type reservations - done
+3- Send an Email to the site admin for new reservations - done
+4- Create a custom email template for reservations - done
+	- Reservation ID
+	- Confirmation message
+	- Admin email to contact for further inquiry.
+5- For reservation post type hide all these default meta boxes - done
+	- Feature image- done
+	- Description- done
+	- Custom fields - done
+6- Configure SMTP on localhost to send emails - done
+
+
+
+@todo
+-check abandoned booking availabity dates - done
+-restrict phone number field to just numbers - done
+-finish layout for email templates- done
+-fixed date format sent to server- done
+
+-add thank you page, clickable through email -inprog
+-integrate payment method (either stripe or paypal) - inprog
+
+@todo
+- thank you page with details layout - done (might add some details and functionalitie)
+- finish stripe integration also paypal - inprog
+
+
+
+@todo- July 13 2023
+- change stripe checkout implementation to paymentintent - done
+  - validation- done
+  - add options (3d and Partial payment, full payment)- inprog
+- validate depart and arrival date range to have at least 24H or 1day duration- done
+
+@todo - July 14 2023
+- complete 3D and Partial payment implementation
+  - add section to complete partial payment in thank you page add layout and detail changes.
+- create settings page and profile page
+- check email sending function
+
+
+@todo - July 18
+- image upload - done
+- pofile page - done
+- layout responsiveness - inprog
+- contact form - pending
+- invoice page and reservations page - pending
+
+@todo - July 19
+- layout responsiveness - inprog
+- contact form - done
+- invoice page and reservations page - done
+- Guesly famillarization with api and what does Guestly do - inprog
+
+
+
+
+@Todo - July 20
+1- How many authentication methods are being used in the REST API's - inprog
+ - Answer
+     1. API Keys
+     2. OAuth 2.0
+     3. HTTP Authentication Schemes (Basic & Bearer)
+     4. JWT Authentication (JSON Web Token)
+
+2- Guesty Modules - https://www.guesty.com/features/
+
+
+@todo July 24, 2023 (until end of day)
+1- create plugin - next
+2- create setting page (i.e guesty credentials) next;
+3- create functionalities (sync listing, ical sync); -- inprog
+
+
+@todo 
+1- finish listing api integration sync from guesty  - inprog (more improvement);
+ - wrong syc implementation -fixed
+ - bug - uploaded images are blank - fixed
+2- do reservations api integration sync - pedning
+3- ical sync integration - pending
+4- override ajax call from parent 
+
+
+NOTE: when creating images from an api, only create images on the first time and not touch or change the images when updating. ( for existing images )
+
+meeting link: http://boostly.co.uk/meet
+boostly integration page link: https://boostly.co.uk/integrations
+boostly fiel dropbox for 3.o: https://www.dropbox.com/scl/fo/wy4wcrxkzm5i43a4cj83c/h?rlkey=18bkfkxsimodqfvth88l0ur08&dl=0
+
+tips:
+1. credentials (site/ wpadmin)
+  - api docs
+
+2. FTP access
+3. trello workflow and guidlines
+4. Plugins
+   - Homey
+   - Homey Core 
+   - Homey Login/Register
+   - Guesty v2 (API)
+   - Boostly coupon
+   
+5. site Workflow
+   - create backup (backup folder w/ marking dates)
+   - create separate folder for current changes
+
+6. staging to live flow
+
+
+
+---STRIPE TEST CARDS: https://stripe.com/docs/testing
+---STRIPE 3DS CARDS: https://stripe.com/docs/payments/3d-secure
+
+---BOOSTLY-API-DOCS( GUESTY PMS ): https://open-api-docs.guesty.com/reference/how-to-use-the-api-reference
+
+
+note as Dev:
+
+code indentation extentions
+html and css formatter extentions
+wordpress snippet extentions
+
+- html and php files extention - specific type of extentions
+
+
+columns=fullName%20guestEmail%20guestPhone%20address%20id'
+
+
+
+pm_1NV7EICFcfuVPjgPaYcYoajL
+
+pm_1NV7C4CFcfuVPjgPzmi2dO66

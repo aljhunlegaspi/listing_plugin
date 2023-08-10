@@ -22,6 +22,8 @@ class ComposerStaticInitd9c6377d74637611be1596553dbfac95
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'yidas\\csv\\Reader' => __DIR__ . '/..' . '/yidas/csv/src/Reader.php',
+        'yidas\\csv\\Writer' => __DIR__ . '/..' . '/yidas/csv/src/Writer.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

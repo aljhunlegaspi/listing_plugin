@@ -1,0 +1,28 @@
+--- Guesty Test Account ---
+url: https://app.guesty.com/
+User: tom+1@boostly.co.uk
+Pass: B00stly1234!!
+
+
+--- Guestly Auth app ---
+app name: Benjo app
+client_id = 0oaag4kcnjezA5gke5d7
+client_seecret = HgNxPs4V5kAn4wioXwcxFhz01TNf00StOQfuIxLXDI3SYvO-4sd0_KwsvjgyCYzf
+
+--- Guesty api docs: https://open-api-docs.guesty.com/reference/how-to-use-the-api-reference
+
+app name: Ivan app
+client_id: 0oaafpa3mf7GVZkz95d7
+client_seecret: HwGcTpAoMw27xK4ZQYCufo4ZFaocjI22_alCczZyEh8SYKNJ5IVvElB04sATl6Cm
+
+
+---tom stripe test account --
+username: tom@boostly.co.uk
+password: Coconut85!
+LIVE
+SecretKey: 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
+PublicKey: pk_live_51HBeUdJHnUHY7gK8Pa8IGW7TETSLVjA5pJKGXAAZqsDiM2zwaTVrsdyvEYhzSPUsbW2b7NhIP14Z1oeNN5tQ0p5200dpIXAD02
+3DS testing Card: 4000 0027 6000 3184
+
+--connect guesty -> stripe lock code---
+-- code: aflv-kimu-wupc-ilpm-tdzn

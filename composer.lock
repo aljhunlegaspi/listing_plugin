@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10187708284ef8be0c387ba8983fe300",
+    "content-hash": "09d7df4a3d55811a00e0903786e90666",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
@@ -145,6 +145,46 @@
                 "source": "https://github.com/htmlburger/carbon-fields"
             },
             "time": "2023-04-04T08:41:31+00:00"
+        },
+        {
+            "name": "yidas/csv",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yidas/csv-php.git",
+                "reference": "aafdd964ea0a384091ed9200b338bdbb58ab4d2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yidas/csv-php/zipball/aafdd964ea0a384091ed9200b338bdbb58ab4d2e",
+                "reference": "aafdd964ea0a384091ed9200b338bdbb58ab4d2e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP CSV writer & reader with settings of quoting enclosure and encoding",
+            "homepage": "https://github.com/yidas/csv-php",
+            "keywords": [
+                "Excel CSV",
+                "Quoting CSV",
+                "csv",
+                "csv reader",
+                "csv writer",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/yidas/csv-php/issues",
+                "source": "https://github.com/yidas/csv-php"
+            },
+            "time": "2021-09-06T11:01:59+00:00"
         }
     ],
     "packages-dev": [],

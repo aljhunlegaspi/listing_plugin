@@ -1,4 +1,12 @@
 <?php
+/** 
+ * 
+ * Plugin Name: Listing Plugin
+ * Description: This is a Test Plugin
+ * Version: 1.0.0
+ * Text Domain: options-plugin
+ * 
+*/
 
 if (!defined('ABSPATH')) {
       die('You cannot be here');
@@ -8,6 +16,14 @@ if ( ! function_exists( 'post_exists' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/post.php' );
 }
 require_once( ABSPATH . 'wp-admin/includes/taxonomy.php');
+
+define('MY_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
+
+include_once MY_PLUGIN_PATH . 'reservations.php';
+include_once MY_PLUGIN_PATH . 'api_custom_settings.php';
+include_once MY_PLUGIN_PATH . 'a_ajax_actions.php';
+
+require_once(MY_PLUGIN_PATH . '/vendor/autoload.php');
 
 function calendar_enque_scripts_and_styles() {
     // echo 'enque scripts';
@@ -59,18 +75,18 @@ function add_listing_setting_submenu() {
         __( 'Listing Settings', 'textdomain' ),
         __( 'Settings', 'textdomain' ),
         'manage_options',
-        'listing-shortcode-ref',
-        'listing_ref_page_callback' 
+        'listing_settings',
+        'listing_settings_page_callback' 
     );
 }
 
 /**
  * Display callback for the submenu page.
  */
-function listing_ref_page_callback() { 
+function listing_settings_page_callback() { 
     ?>
     <div class="wrap">
-        <h1><?php _e( 'Listing Settings', 'textdomain' ); ?></h1>
+        <h1><?php _e( 'Listing Settings', 'myTestSite' ); ?></h1>
         <div id="form_success" style="background-color:green; color:#fff;"></div>
         <div id="form_error" style="background-color:red; color:#fff;"></div>
         <button style="background-color: #175D72;color: white; padding: 10px 25px; border: 1px solid #175D72; border-radius: 5px;" id="sync-btn">Sync</button>
@@ -700,8 +716,6 @@ function handle_sync(){
                     }else{
                         wp_update_post($postarr);
                     }
-                // update_post_meta( $post_id, 'gallery_images', explode(',', sanitize_text_field($remainingRow[15])) );
-
             }
         }
 
@@ -1051,7 +1065,7 @@ function show_calendar(){
 
         function updateBookingDates(){
             let new_booking_range= $('#booking-range').val();
-            e_val = (e_val) ? `,${new_booking_range}` : `${new_booking_range}`;
+            e_val = (e_val && (e_val !== "")) ? `,${new_booking_range}` : `${new_booking_range}`;
             $.ajax({
                     method:"POST",
                     url: "<?php echo get_rest_url(null, 'post_meta/update');?>",
